@@ -58,6 +58,11 @@ export const jsConfig = () => {
       rules: [amdRule, jsRule, scssRule, jisonRule]
     },
     // plugins: [new BundleAnalyzerPlugin()],
-    devtool: 'source-map'
+    devtool: 'source-map',
+	performance: {
+        //hints: false,
+        maxEntrypointSize: 4096000,
+        maxAssetSize: 4096000
+    }
   };
 };
