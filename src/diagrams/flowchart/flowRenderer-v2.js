@@ -182,7 +182,7 @@ export const addEdges = function(edges, g) {
   edges.forEach(function(edge) {
     cnt++;
 
-	// Identify Link
+    // Identify Link
     var linkId = 'L-' + edge.start + '-' + edge.end;
     var linkNameStart = 'LS-' + edge.start;
     var linkNameEnd = 'LE-' + edge.end;
