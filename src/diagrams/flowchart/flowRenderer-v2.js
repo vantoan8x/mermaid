@@ -249,7 +249,6 @@ export const addEdges = function(edges, g) {
       if (getConfig().flowchart.htmlLabels && false) { // eslint-disable-line
         edgeData.labelType = 'html';
         edgeData.label = `<span id="L-${linkId}" class="edgeLabel L-${linkNameStart}' L-${linkNameEnd}">${edge.text}</span>`;
-
       } else {
         edgeData.labelType = 'text';
         edgeData.label = edge.text.replace(common.lineBreakRegex, '\n');
