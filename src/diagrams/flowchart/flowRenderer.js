@@ -168,9 +168,9 @@ export const addEdges = function(edges, g) {
     cnt++;
 
 	// Identify Link
-	var linkId = "L-" + edge.start + "-" + edge.end;
-	var linkNameStart = "LS-" + edge.start;
-	var linkNameEnd = "LE-" + edge.end;
+	var linkId = 'L-' + edge.start + '-' + edge.end;
+	var linkNameStart = 'LS-' + edge.start;
+	var linkNameEnd = 'LE-' + edge.end;
 
     const edgeData = {};
 
@@ -229,7 +229,7 @@ export const addEdges = function(edges, g) {
 
       if (getConfig().flowchart.htmlLabels) {
         edgeData.labelType = 'html';
-        edgeData.label = '<span id="L-'+linkId+'" class="edgeLabel L-'+linkNameStart +'L-'+ linkNameEnd + '">' + edge.text + '</span>';
+        edgeData.label = `<span id="L-${linkId}" class="edgeLabel L-${linkNameStart}' L-${linkNameEnd}">${edge.text}</span>`;
 
       } else {
         edgeData.labelType = 'text';
@@ -244,7 +244,7 @@ export const addEdges = function(edges, g) {
     }
 
 	edgeData.id = linkId;
-	edgeData.class = linkNameStart + " " + linkNameEnd;
+	edgeData.class = linkNameStart + ' ' + linkNameEnd;
 
 	// Add the edge to the graph
     g.setEdge(edge.start, edge.end, edgeData, cnt);
