@@ -88,7 +88,7 @@ const init = function() {
       continue;
     }
 
-    const id = `mermaid-${Date.now()}`;
+    const id = `mermaid-${__mmGId++}`;
 
     // Fetch the graph definition including tags
     txt = element.innerHTML;
@@ -171,6 +171,8 @@ if (typeof document !== 'undefined') {
     false
   );
 }
+
+let __mmGId = 1;
 
 const mermaid = {
   startOnLoad: true,
